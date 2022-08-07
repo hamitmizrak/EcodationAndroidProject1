@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView için gerekli-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+
+
+    <!--scrollView-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--scrollView bağlı-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--firebase data select-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/firebaseSelectId"
+                android:text="Firebase Select"
+                android:textColor="#ffffff"
+                android:background="#000000"/>
+
+            <!--firebase telephone login-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:id="@+id/firebaseLoginIndentButton"
+                android:text="Firebase Phone Validation "/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:id="@+id/preferencesIndentButton"
+                android:text="Shared Preferences "/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="Yeni bir sayfa"/>
+
+            <!--Kamera-->
+            <Button
+                android:id="@+id/cameraPermissionButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Camera İzin" />
+
+            <!--Konum-->
+            <Button
+                android:id="@+id/locationPermissionButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Konum İzin" />
+
+
+            <!--fragment-->
+            <Button
+                android:id="@+id/fragmentButtonId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fragment Click" />
+
+            <!--menu-->
+            <Button
+                android:id="@+id/menuButtonId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Menu Click" />
+
+
+            <!--localstorage -->
+            <Button
+                android:id="@+id/localStorageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp" />
+
+            <!--realtimeDatabase-->
+            <Button
+                android:id="@+id/realtimeDatabase"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:text="Realtime database Geçiş"
+                android:textColor="#ffffff" />
+
+
+            <!--reCycleView Button-->
+            <Button
+                android:id="@+id/reCycleViewId"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="ReCycleView Button" />
+
+            <!--listview-->
+            <Button
+                android:id="@+id/otherListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:text="ListView"
+                android:textColor="#ffffff" />
+
+            <!--activiyler arasında veri taşımak-->
+            <EditText
+                android:id="@+id/editTextOtherActivityDataSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Diğer Activity için yazınız..." />
+
+            <Button
+                android:id="@+id/buttonOtherActivityData"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Gönder" />
+
+
+            <!--activity arasında geçiş sağlansın-->
+            <Button
+                android:id="@+id/otherActivityRadioGroupId"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:text="Diğer Activity Gender Git" />
+
+            <!--firebase telephone login-->
+            <EditText
+                android:id="@+id/validationPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:hint="Telefon numaranız +90 xxxyyyzzmm" />
+
+            <Button
+                android:id="@+id/validationButton"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="İstek At"
+                android:textColor="#ffffff" />
+
+            <EditText
+                android:id="@+id/validationCodeNumber"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:gravity="center"
+                android:hint="Valication Code"
+                android:inputType="textPassword" />
+
+
+            <!-- FAB: her zaman bir button-->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <!--progressBar:-->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--glide:internetteki resimleri almak-->
+            <ImageView
+                android:id="@+id/imageViewGlide"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <!--icon: kendi iconumu olusturdum-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleViewExam1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/benim_bus" />
+
+            <ImageView
+                android:id="@+id/imageViewExam1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <!--textView-->
+            <TextView
+                android:id="@+id/textViewExam1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Data" />
+
+            <!--editText-->
+            <EditText
+                android:id="@+id/editTextExamp1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <!-- Button -->
+            <Button
+                android:id="@+id/buttonExamp1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Gönder" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/circleView1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@drawable/benim_vector"
+                app:civ_border_color="#FF000000" />
+
+            <ImageView
+                android:id="@+id/imgaView1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/flowers" />
+
+            <!--sadece okumak-->
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/black"
+
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/hamit_mizrak"
+                android:textColor="#ffffff" />
+
+            <!--input-->
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:text="Buraya yazınız..." />
+
+            <!--button-->
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/submit" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

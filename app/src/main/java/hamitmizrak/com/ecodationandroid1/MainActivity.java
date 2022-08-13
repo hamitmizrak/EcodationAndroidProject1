@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     //Global Variable
 
     //Firebase select
+    Button telephoneValidationId;
+
+    //Firebase select
     Button firebaseSelectId;
 
     //Firebase Telephone Validation Login
@@ -106,19 +109,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
 
+        //telephone Validation
+        telephoneValidationId = findViewById(R.id.telephoneValidationId);
+        telephoneValidationId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent telephoneValidationIntent = new Intent(getApplicationContext(), TelephoneValidation.class);
+                Toast.makeText(MainActivity.this, "Telephone Validation Selected", Toast.LENGTH_SHORT).show();
+                Log.e("on Validation Telephone", "Validation message");
+                startActivity(telephoneValidationIntent);
+            }
+        });
+
+
         //Firebase select
-        firebaseSelectId=findViewById(R.id.firebaseSelectId);
+        firebaseSelectId = findViewById(R.id.firebaseSelectId);
         firebaseSelectId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent firebaseIntent=new Intent(getApplicationContext(), FirebaseSelectActivity.class);
+                Intent firebaseIntent = new Intent(getApplicationContext(), FirebaseSelectActivity.class);
                 Toast.makeText(MainActivity.this, "Firebase Select", Toast.LENGTH_SHORT).show();
                 startActivity(firebaseIntent);
             }
         });
 
         //Firebase Validation Login
-        firebaseLoginIndentButton=findViewById(R.id.firebaseLoginIndentButton);
+        firebaseLoginIndentButton = findViewById(R.id.firebaseLoginIndentButton);
         firebaseLoginIndentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Shared Preferencences
-        preferencesIndentButton=findViewById(R.id.preferencesIndentButton);
+        preferencesIndentButton = findViewById(R.id.preferencesIndentButton);
         preferencesIndentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -140,18 +156,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Kamera
-         cameraPermissionButton=findViewById(R.id.cameraPermissionButton);
-         cameraPermissionButton.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 Intent cameraIntent = new Intent(getApplicationContext(), CameraActivity.class);
-                 Toast.makeText(getApplicationContext(), "Kamera Activity Geçiş yapıldı", Toast.LENGTH_SHORT);
-                 startActivity(cameraIntent);
-             }
-         });
+        cameraPermissionButton = findViewById(R.id.cameraPermissionButton);
+        cameraPermissionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent cameraIntent = new Intent(getApplicationContext(), CameraActivity.class);
+                Toast.makeText(getApplicationContext(), "Kamera Activity Geçiş yapıldı", Toast.LENGTH_SHORT);
+                startActivity(cameraIntent);
+            }
+        });
 
         //Konum
-         locationPermissionButton=findViewById(R.id.locationPermissionButton);
+        locationPermissionButton = findViewById(R.id.locationPermissionButton);
         locationPermissionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

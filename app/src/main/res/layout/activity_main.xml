@@ -13,7 +13,7 @@
     tools:context=".MainActivity">
 
 
-
+<!--RelativeLayout ScrollView LinearLayout -->
     <!--scrollView-->
     <ScrollView
         android:layout_width="match_parent"
@@ -24,6 +24,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <!--Telephone validation select-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/telephoneValidationId"
+                android:text="Telephone Validation"
+                android:textColor="#ffffff"
+                android:background="#000000"
+                android:layout_marginBottom="15dp"
+                />
 
             <!--firebase data select-->
             <Button

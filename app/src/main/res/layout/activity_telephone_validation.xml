@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TelephoneValidation">
+
+    <!--firebase Telephone login-->
+    <!--
+    drawableLeft:icon eklemek
+    margin:dış boşluk
+    padding:iç boşluk-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:id="@+id/editTextFirebasetelephoneValidationId"
+        android:layout_marginTop="90dp"
+        android:paddingTop="15dp"
+        android:drawableLeft="@drawable/ic_baseline_settings_cell_24"
+        android:hint="Telefon numaranız +90 xxxyyyzzmm"/>
+
+    <!--icon eklemek: android:drawableLeft-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/buttonFirebasetelephoneValidationId"
+        android:textColor="#ffffff"
+        android:drawableLeft="@drawable/ic_baseline_smart_button_24"
+        android:textSize="18dp"
+
+        android:text="İstek At"/>
+
+    <!--inputType: password masking-->
+    <EditText
+        android:id="@+id/editTextFirebaseVerificationCodeId"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_baseline_verified_user_24"
+        android:gravity="center"
+        android:hint="Doğrula kodunu yazınız"
+        android:inputType="textPassword" />
+</LinearLayout>

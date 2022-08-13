@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -42,7 +43,7 @@ public class TelephoneValidation extends AppCompatActivity {
                 editTextFirebasetelephoneValidationId.getText().toString(), 60, TimeUnit.SECONDS, this, myCallBack);
     }
 
-    //onCreate Method
+    //onCreate Method: Projemizi açıtğımızda ilk çalışacak kdo
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +58,26 @@ public class TelephoneValidation extends AppCompatActivity {
         //Firebase bağlanmak için
         firebaseAuth = FirebaseAuth.getInstance();
 
+        buttonFirebasetelephoneValidationId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //verificationID dolu ise sisteme giriş yapabilirim
+                //Eğer verficationId null ise tekrardan startedVerfication Metodu çalışsın
+                if(verificationID!=null){
+                    //verification code almak ve sisteme giriş yapmak
+                    PhoneAuthCredential phoneAuthCredential=PhoneAuthProvider.getCredential(
+                            verificationID,editTextFirebaseVerificationCodeId.getText().toString());
+                    firebaseAuth.signInWithCredential(phoneAuthCredential);
+                }else{
+                    Toast.makeText(TelephoneValidation.this, "Verification code tekrarı", Toast.LENGTH_SHORT).show();
+
+                    //doğrulamanın başlaması için gereken method
+                    startedVerification();
+                }
+            }
+        });
+
+
         //myCallBack Function abstract: verification callBack
         myCallBack = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             //verification koduna gerek olmadığı durumlarda bu metot kullanılır
@@ -70,7 +91,7 @@ public class TelephoneValidation extends AppCompatActivity {
             @Override
             public void onVerificationFailed(@NonNull FirebaseException e) {
                 Toast.makeText(TelephoneValidation.this, "Telefonla Sisteme Giriş yapılırken hata meydana geldi", Toast.LENGTH_SHORT).show();
-                Log.e("onVerificationFailed","Sisteme Giriş yapılırken hata meydana geldi")
+                Log.e("onVerificationFailed","Sisteme Giriş yapılırken hata meydana geldi");
             }
 
             //verification kod gönderdikten sonra çalışması sağlayan method

@@ -25,6 +25,20 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+            <!--Telephone validation select-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/telephoneValidationId2"
+                android:text="Telephone Validation2"
+                android:textColor="#ffffff"
+                android:background="#000000"
+                android:drawableLeft="@drawable/ic_baseline_settings_cell_24"
+                android:layout_marginBottom="15dp"
+                />
+
+
             <!--Telephone validation select-->
             <Button
                 android:layout_width="match_parent"

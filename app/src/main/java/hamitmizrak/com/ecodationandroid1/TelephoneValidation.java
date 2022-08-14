@@ -100,7 +100,7 @@ public class TelephoneValidation extends AppCompatActivity {
                                     } else {
                                         HashMap<String, Object> hashMap = new HashMap<>();
                                         hashMap.put("Name", "Hamit");
-                                        hashMap.put("Surname", "Mızrak ");
+                                        hashMap.put("Surname", "Mızrak");
                                         hashMap.put("Photo", "");
                                         hashMap.put("Status", "Merhabalar");
                                         hashMap.put("Phone", firebaseUser.getPhoneNumber());

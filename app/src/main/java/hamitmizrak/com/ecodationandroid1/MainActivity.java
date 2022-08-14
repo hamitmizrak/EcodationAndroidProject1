@@ -28,6 +28,8 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
     //Global Variable
+    //Firebase select
+    Button telephoneValidationId2;
 
     //Firebase select
     Button telephoneValidationId;
@@ -109,6 +111,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
+
+        //telephone Validation
+        telephoneValidationId2 = findViewById(R.id.telephoneValidationId2);
+        telephoneValidationId2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent telephoneValidationIntent2 = new Intent(getApplicationContext(), LoginActivity2.class);
+                Toast.makeText(MainActivity.this, "Telephone Validation Selected2", Toast.LENGTH_SHORT).show();
+                Log.e("on Validation Telephone2", "Validation message2");
+                startActivity(telephoneValidationIntent2);
+            }
+        });
 
 
         //telephone Validation

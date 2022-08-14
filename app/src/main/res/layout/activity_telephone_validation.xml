@@ -8,38 +8,34 @@
     tools:context=".TelephoneValidation">
 
     <!--firebase Telephone login-->
-    <!--
-    drawableLeft:icon eklemek
-    margin:dış boşluk
-    padding:iç boşluk-->
+    <!--drawableLeft:icon eklemek-->
     <EditText
+        android:id="@+id/phoneNumberEditTextId"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:id="@+id/editTextFirebasetelephoneValidationId"
         android:layout_marginTop="90dp"
-        android:paddingTop="15dp"
         android:drawableLeft="@drawable/ic_baseline_settings_cell_24"
-        android:hint="Telefon numaranız +90 xxxyyyzzmm"/>
+        android:hint="Telefon numaranız +90 xxxyyyzzmm"
+        android:paddingTop="15dp"
+        app:layout_anchor="@+id/phoneNumberEditTextId"
+        app:layout_anchorGravity="bottom|center" />
 
-    <!--icon eklemek: android:drawableLeft-->
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:id="@+id/buttonFirebasetelephoneValidationId"
-        android:textColor="#ffffff"
-        android:drawableLeft="@drawable/ic_baseline_smart_button_24"
-        android:textSize="18dp"
-
-        android:text="İstek At"/>
-
-    <!--inputType: password masking-->
     <EditText
-        android:id="@+id/editTextFirebaseVerificationCodeId"
+        android:id="@+id/phoneCodeEditTextId"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_marginTop="10dp"
         android:drawableLeft="@drawable/ic_baseline_verified_user_24"
-        android:gravity="center"
         android:hint="Doğrula kodunu yazınız"
         android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/confirmationButtonId"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:drawableLeft="@drawable/ic_baseline_smart_button_24"
+        android:text="İstek At"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
 </LinearLayout>

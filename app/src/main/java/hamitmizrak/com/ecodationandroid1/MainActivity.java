@@ -20,6 +20,7 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
@@ -109,19 +110,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Log.e("onCreate", "ilk açılan");
 
+
         //telephone Validation
         telephoneValidationId = findViewById(R.id.telephoneValidationId);
         telephoneValidationId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent telephoneValidationIntent = new Intent(getApplicationContext(), TelephoneValidation.class);
+                Intent telephoneValidationIntent = new Intent(getApplicationContext(), LoginActivity.class);
                 Toast.makeText(MainActivity.this, "Telephone Validation Selected", Toast.LENGTH_SHORT).show();
                 Log.e("on Validation Telephone", "Validation message");
                 startActivity(telephoneValidationIntent);
             }
         });
 
-
+///////////////////
         //Firebase select
         firebaseSelectId = findViewById(R.id.firebaseSelectId);
         firebaseSelectId.setOnClickListener(new View.OnClickListener() {

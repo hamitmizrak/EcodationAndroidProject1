@@ -33,6 +33,7 @@
                 android:text="Telephone Validation"
                 android:textColor="#ffffff"
                 android:background="#000000"
+                android:drawableLeft="@drawable/ic_baseline_settings_cell_24"
                 android:layout_marginBottom="15dp"
                 />
 

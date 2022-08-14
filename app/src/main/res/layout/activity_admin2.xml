@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".AdminActivity2">
 
+    <TextView
+        android:layout_width="245dp"
+        android:layout_height="80dp"
+        android:text="Merhabalar Login olduysanız bu sayfası görebilirsiniz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
